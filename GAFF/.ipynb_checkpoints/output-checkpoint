@@ -1,0 +1,9 @@
+LAMMPS (16 Mar 2018)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:90)
+  using 1 OpenMP thread(s) per MPI task
+Switching to CHARMM coulomb energy conversion constant (../pair_lj_charmmfsw_coul_charmmfsh.cpp:55)
+Reading potential file charmm22.cmap with DATE: 2016-09-26
+Reading data file ...
+ERROR on proc 0: Cannot open file gagg.data (../read_data.cpp:1938)
+Last command: read_data       gagg.data fix cmap crossterm CMAP
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0

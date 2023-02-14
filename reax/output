@@ -1,0 +1,130 @@
+LAMMPS (16 Mar 2018)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (../comm.cpp:90)
+  using 1 OpenMP thread(s) per MPI task
+Reading data file ...
+  orthogonal box = (0 0 0) to (50 50 50)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  105 atoms
+Reading potential file ffield.reax.rdx with DATE: 2010-02-19
+Neighbor list info ...
+  update every 10 steps, delay 0 steps, check no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12.5
+  ghost atom cutoff = 12.5
+  binsize = 6.25, bins = 8 8 8
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair reax/c, perpetual
+      attributes: half, newton off, ghost
+      pair build: half/bin/newtoff/ghost
+      stencil: half/ghost/bin/3d/newtoff
+      bin: standard
+  (2) fix qeq/reax, perpetual, copy from (1)
+      attributes: half, newton off, ghost
+      pair build: copy
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 1
+Per MPI rank memory allocation (min/avg/max) = 12.69 | 12.69 | 12.69 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0            0   -8309.7312            0   -8309.7312    3286.8699 
+ 1000000     10.03667   -9069.3605            0   -9066.2491    22.851235 
+Loop time of 2257.77 on 1 procs for 1000000 steps with 105 atoms
+
+Performance: 38.268 ns/day, 0.627 hours/ns, 442.916 timesteps/s
+100.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1865       | 1865       | 1865       |   0.0 | 82.60
+Neigh   | 24.478     | 24.478     | 24.478     |   0.0 |  1.08
+Comm    | 3.4727     | 3.4727     | 3.4727     |   0.0 |  0.15
+Output  | 2.5988e-05 | 2.5988e-05 | 2.5988e-05 |   0.0 |  0.00
+Modify  | 363.01     | 363.01     | 363.01     |   0.0 | 16.08
+Other   |            | 1.821      |            |       |  0.08
+
+Nlocal:    105 ave 105 max 105 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    359 ave 359 max 359 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    5297 ave 5297 max 5297 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 5297
+Ave neighs/atom = 50.4476
+Neighbor list builds = 100000
+Dangerous builds not checked
+Neighbor list info ...
+  update every 10 steps, delay 0 steps, check no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12.5
+  ghost atom cutoff = 12.5
+  binsize = 6.25, bins = 8 8 8
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair reax/c, perpetual
+      attributes: half, newton off, ghost
+      pair build: half/bin/newtoff/ghost
+      stencil: half/ghost/bin/3d/newtoff
+      bin: standard
+  (2) fix qeq/reax, perpetual, copy from (1)
+      attributes: half, newton off, ghost
+      pair build: copy
+      stencil: none
+      bin: none
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 1000000
+  Time step     : 0.01
+Per MPI rank memory allocation (min/avg/max) = 14.35 | 14.35 | 14.35 Mbytes
+Step PotEng KinEng TotEng Temp Volume Press 
+ 1000000   -9069.3645    3.1114103   -9066.2531     10.03667       125000    22.852675 
+ 1100000   -9060.3571    30.290395   -9030.0667    97.709613       125000     9.649932 
+ 1200000   -9065.9643    32.909116   -9033.0551    106.15698       125000   -53.797718 
+ 1300000   -9064.9386    34.717362   -9030.2213    111.98996       125000   -20.185952 
+ 1400000   -9068.0256    30.862818   -9037.1628    99.556114       125000    4.0621146 
+ 1500000    -9057.204    33.968745   -9023.2353     109.5751       125000    100.26258 
+ 1600000   -9064.1291    36.476131   -9027.6529    117.66333       125000    5.5493946 
+ 1700000   -9072.4246    31.467463   -9040.9572    101.50656       125000   -14.515818 
+ 1800000   -9121.7799    32.037477   -9089.7424    103.34528       125000    13.840345 
+ 1900000   -9127.0187    39.215911   -9087.8028    126.50121       125000    83.618211 
+ 2000000   -9127.2077    42.137056   -9085.0706    135.92412       125000    11.326931 
+ 2100000   -9120.6126     37.92373   -9082.6889    122.33294       125000   -2.2906362 
+ 2200000   -9126.8504    37.348421   -9089.5019    120.47713       125000   -29.083819 
+ 2300000    -9135.872     37.16033   -9098.7117    119.87039       125000    63.694346 
+ 2400000   -9128.4866    37.258511   -9091.2281     120.1871       125000    10.111087 
+ 2500000   -9186.7735    45.389123   -9141.3844    146.41452       125000    33.627252 
+ 2600000   -9193.6329    37.991736   -9155.6412    122.55231       125000   -15.412097 
+ 2700000   -9201.7243     40.19174   -9161.5326      129.649       125000   -14.554561 
+ 2800000   -9201.4349    39.958942   -9161.4759    128.89805       125000   -38.818882 
+ 2900000   -9196.4856    41.140858   -9155.3448    132.71063       125000   -17.297538 
+ 3000000    -9192.087    44.560216   -9147.5268    143.74066       125000    96.548254 
+ 3100000   -9191.5376    44.596512   -9146.9411    143.85775       125000    157.05766 
+ 3200000   -9189.9976     40.96179   -9149.0358      132.133       125000   -70.787986 
+ 3300000   -9193.8445    40.447486   -9153.3971    130.47397       125000    2.8461962 
+ 3400000   -9190.7531    39.355332   -9151.3977    126.95095       125000    96.978892 
+ 3500000   -9188.6682    46.657656   -9142.0105    150.50651       125000    29.230751 
+ 3600000    -9193.518       47.371    -9146.147    152.80758       125000     88.28671 
+ 3700000   -9188.3631    46.562314   -9141.8008    150.19895       125000    5.7355279 
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 123106 RUNNING AT smp-n32
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 123106 RUNNING AT smp-n32
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+   Intel(R) MPI Library troubleshooting guide:
+      https://software.intel.com/node/561764
+===================================================================================

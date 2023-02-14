@@ -1,0 +1,38 @@
+# REAX potential for high energy CHON systems
+# .....
+
+units		real
+
+atom_style	full
+read_data	RDX.data
+
+pair_style	lj/cut 8.5
+pair_coeff	1 1 0.1078 3.39770953124
+pair_coeff	2 2 0.0208 2.60017699876
+pair_coeff	3 3 0.2150 3.18995195017
+pair_coeff	4 4 0.1463 3.04812087425
+pair_modify     mix geometric
+
+bond_style harmonic
+bond_coeff 1 378.57 1.398
+
+neighbor	2.5 bin
+neigh_modify	every 10 delay 0 check no
+
+fix		1 all nve
+fix             2 all temp/berendsen 10.0 10.0 100.0
+run		100000
+
+unfix 1
+unfix 2
+
+fix          1 all nvt temp 100 1000 2 drag 0.2
+
+timestep	0.01
+
+dump		1 all atom 10000 dump.reax.rdx
+
+thermo_style custom step pe ke etotal temp vol press
+thermo 10000
+
+run		1000000
